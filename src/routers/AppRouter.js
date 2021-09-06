@@ -2,12 +2,12 @@ import React from "react";
 import SideBar from "../components/SideBar";
 import NavBar from "../components/NavBar";
 import Simple from "../pages/Simple";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route, HashRouter } from "react-router-dom";
 import Home from "../pages/Home";
 
 const AppRouter = () => {
   return (
-    <Router>
+    <HashRouter>
       <SideBar />
       <main
         className="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg "
@@ -24,7 +24,7 @@ const AppRouter = () => {
           </div>
         </div>
       </main>
-    </Router>
+    </HashRouter>
   );
 };
 

@@ -1,6 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {
+  NavLink,
+  useRouteMatch,
+  useLocation,
+  useHistory,
+} from "react-router-dom";
 const SideBar = () => {
+  const location = useLocation();
+  const history = useHistory();
+  console.log(location);
+  console.log(history);
+  const mach = useRouteMatch();
+  console.log(mach);
   return (
     <aside
       className="navbar navbar-vertical border-0 border-radius-xl  
@@ -28,7 +39,7 @@ const SideBar = () => {
           <li className="nav-item m-1">
             <NavLink
               className="nav-link rounded-3"
-              to="/simple"
+              to={`/simple`}
               activeClassName="active"
             >
               <div className="p-2 txt-dark">
