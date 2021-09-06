@@ -23,7 +23,7 @@ const NavBar = () => {
           </button>
           <span className="navbar-brand">Dashboard</span>
         </div>
-        <form className="d-flex">
+        <form className="d-flex col-md-6">
           <input
             className="form-control me-2"
             type="search"

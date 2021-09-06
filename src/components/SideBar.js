@@ -1,5 +1,5 @@
 import React from "react";
-
+import { NavLink } from "react-router-dom";
 const SideBar = () => {
   return (
     <aside
@@ -26,9 +26,10 @@ const SideBar = () => {
             </small>
           </li>
           <li className="nav-item m-1">
-            <a
-              className="nav-link rounded-3 active"
-              href="../pages/dashboard.html"
+            <NavLink
+              className="nav-link rounded-3"
+              to="/simple"
+              activeClassName="active"
             >
               <div className="p-2 txt-dark">
                 <span className="icon shadow p-2 rounded-3 ">
@@ -36,37 +37,21 @@ const SideBar = () => {
                 </span>
                 <span className="nav-link-text ms-1">Interés simple</span>
               </div>
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item m-1">
-            <a className="nav-link rounded-3 " href="../pages/dashboard.html">
-              <div className="p-2 txt-dark">
-                <span className="icon shadow p-2 rounded-3">
-                  <i className="fa fa-hand-holding-usd "></i>
-                </span>
-                <span className="nav-link-text ms-1">Dashboard</span>
-              </div>
-            </a>
-          </li>
-          <li className="nav-item m-1">
-            <a className="nav-link rounded-3 " href="../pages/dashboard.html">
+            <NavLink
+              className="nav-link rounded-3"
+              to="/x"
+              activeClassName="active"
+            >
               <div className="p-2 txt-dark">
                 <span className="icon shadow p-2 rounded-3 ">
                   <i className="fa fa-hand-holding-usd "></i>
                 </span>
                 <span className="nav-link-text ms-1">Dashboard</span>
               </div>
-            </a>
-          </li>
-          <li className="nav-item m-1">
-            <a className="nav-link rounded-3 " href="../pages/dashboard.html">
-              <div className="p-2 txt-dark">
-                <span className="icon shadow p-2 rounded-3">
-                  <i className="fa fa-hand-holding-usd "></i>
-                </span>
-                <span className="nav-link-text ms-1">Dashboard</span>
-              </div>
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item mt-3">
             <span
@@ -76,45 +61,35 @@ const SideBar = () => {
               Calculadoras
             </span>
           </li>
+
           <li className="nav-item m-1">
-            <a className="nav-link rounded-3 " href="../pages/dashboard.html">
+            <NavLink
+              className="nav-link rounded-3"
+              to="/y"
+              activeClassName="active"
+            >
               <div className="p-2 txt-dark">
-                <span className="icon shadow p-2 rounded-3">
+                <span className="icon shadow p-2 rounded-3 ">
                   <i className="fa fa-hand-holding-usd "></i>
                 </span>
                 <span className="nav-link-text ms-1">Dashboard</span>
               </div>
-            </a>
+            </NavLink>
           </li>
+
           <li className="nav-item m-1">
-            <a className="nav-link rounded-3 " href="../pages/dashboard.html">
+            <NavLink
+              className="nav-link rounded-3"
+              to="/z"
+              activeClassName="active"
+            >
               <div className="p-2 txt-dark">
-                <span className="icon shadow p-2 rounded-3">
+                <span className="icon shadow p-2 rounded-3 ">
                   <i className="fa fa-hand-holding-usd "></i>
                 </span>
                 <span className="nav-link-text ms-1">Dashboard</span>
               </div>
-            </a>
-          </li>
-          <li className="nav-item m-1">
-            <a className="nav-link rounded-3 " href="../pages/dashboard.html">
-              <div className="p-2 txt-dark">
-                <span className="icon shadow p-2 rounded-3">
-                  <i className="fa fa-hand-holding-usd "></i>
-                </span>
-                <span className="nav-link-text ms-1">Dashboard</span>
-              </div>
-            </a>
-          </li>
-          <li className="nav-item m-1">
-            <a className="nav-link rounded-3 " href="../pages/dashboard.html">
-              <div className="p-2 txt-dark">
-                <span className="icon shadow p-2 rounded-3">
-                  <i className="fa fa-hand-holding-usd "></i>
-                </span>
-                <span className="nav-link-text ms-1">Dashboard</span>
-              </div>
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
