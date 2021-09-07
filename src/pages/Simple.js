@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Input from "../components/formControl/Input";
 import Radios from "../components/formControl/Radios";
 import Select from "../components/formControl/Select";
-import { interesSimple } from "../helpers/financiera";
+import { interesCompuesto, interesSimple } from "../helpers/financiera";
 import useForm from "../hooks/useForm";
 const Simple = () => {
   const [error, setError] = useState({});
   const [respuesta, setRespuesta] = useState();
   const [option, setOption] = useForm({ tipo: "" });
+  const [financiera, setFinanciera] = useState("simple");
   const [form, formChange, setForm] = useForm({
     capital: "",
     tiempo: "",
@@ -38,6 +39,10 @@ const Simple = () => {
       err.tipo_tiempo = "Este campo es requerido";
     }
 
+    if (!financiera.trim()) {
+      err.financiera = "Seleleccione un tipo de interés";
+    }
+
     if (JSON.stringify(err) === "{}") {
       setError({});
       return true;
@@ -52,7 +57,12 @@ const Simple = () => {
     e.preventDefault();
 
     if (validate()) {
-      const respuesta = interesSimple(option.tipo, form, setForm);
+      let respuesta;
+      if (financiera === "simple") {
+        respuesta = interesSimple(option.tipo, form, setForm);
+      } else if (financiera === "compuesto") {
+        respuesta = interesCompuesto(option.tipo, form, setForm);
+      }
       setRespuesta(respuesta);
     }
   };
@@ -66,10 +76,27 @@ const Simple = () => {
           >
             <div className="row ">
               <div className="text-center">
-                <h1>Interés simple</h1>
+                <h1>Calculadora financiera</h1>
                 <p className="fst-italic">
-                  Ingrese mínimo tres valores para calcular el cuarto valor
+                  Calcule su interés simple y compuesto de manera fácil
+                  ingresando tres valores
                 </p>
+              </div>
+
+              <div className="mb-2">
+                <Select
+                  attr={{ name: "finaciera", defaultValue: financiera }}
+                  label="Tipo de interés"
+                  help="Seleccione el tipo de interés que desea calcular"
+                  options={[
+                    { id: "simple", value: "Interés simple" },
+                    { id: "compuesto", value: "interés compuesto" },
+                  ]}
+                  error={error?.financiera}
+                  onChange={(e) => {
+                    setFinanciera(e.target.value);
+                  }}
+                />
               </div>
 
               <div className="mb-2 text-center">
@@ -79,7 +106,11 @@ const Simple = () => {
                     { value: "capital", help: "Capital inicial" },
                     { value: "tiempo", help: "Periodo de tiempo" },
                     { value: "tasa", help: "Tasa de interés" },
-                    { value: "interes", help: "Interés" },
+                    {
+                      value: "interes",
+                      help:
+                        financiera === "simple" ? "Interés" : "Capital final",
+                    },
                   ]}
                   checked={option?.tipo}
                   label="¿Qué quieres calcular?"
@@ -180,8 +211,14 @@ const Simple = () => {
                         disabled: option.tipo === "interes",
                       }}
                       onChange={formChange}
-                      label="Interés"
-                      help="Interés ganado en un tiempo dado"
+                      label={
+                        financiera === "simple" ? "Interés" : "Capital Final"
+                      }
+                      help={
+                        financiera === "simple"
+                          ? "Interés ganado en un tiempo dado"
+                          : "Valor final dado dado un tiempo"
+                      }
                       error={error?.interes}
                     />
                   </div>

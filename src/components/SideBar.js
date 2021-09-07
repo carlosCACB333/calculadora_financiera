@@ -33,7 +33,7 @@ const SideBar = () => {
               className="nav-link-text ms-2 text-uppercase fw-bold opacity-50"
               style={{ fontSize: ".75em" }}
             >
-              Calculadoras
+              Calculadora de interés
             </small>
           </li>
           <li className="nav-item m-1">
@@ -46,30 +46,17 @@ const SideBar = () => {
                 <span className="icon shadow p-2 rounded-3 ">
                   <i className="fa fa-hand-holding-usd "></i>
                 </span>
-                <span className="nav-link-text ms-1">Interés simple</span>
+                <span className="nav-link-text ms-1">Simple y compuesto</span>
               </div>
             </NavLink>
           </li>
-          <li className="nav-item m-1">
-            <NavLink
-              className="nav-link rounded-3"
-              to="/x"
-              activeClassName="active"
-            >
-              <div className="p-2 txt-dark">
-                <span className="icon shadow p-2 rounded-3 ">
-                  <i className="fa fa-hand-holding-usd "></i>
-                </span>
-                <span className="nav-link-text ms-1">Dashboard</span>
-              </div>
-            </NavLink>
-          </li>
+
           <li className="nav-item mt-3">
             <span
               className="nav-link-text ms-2 text-uppercase fw-bold opacity-50"
               style={{ fontSize: ".75em" }}
             >
-              Calculadoras
+              Otras calculadoras
             </span>
           </li>
 
