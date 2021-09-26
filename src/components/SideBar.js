@@ -1,17 +1,6 @@
 import React from "react";
-import {
-  NavLink,
-  useRouteMatch,
-  useLocation,
-  useHistory,
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const SideBar = () => {
-  const location = useLocation();
-  const history = useHistory();
-  console.log(location);
-  console.log(history);
-  const mach = useRouteMatch();
-  console.log(mach);
   return (
     <aside
       className="navbar navbar-vertical border-0 border-radius-xl  
@@ -50,6 +39,20 @@ const SideBar = () => {
               </div>
             </NavLink>
           </li>
+          <li className="nav-item m-1">
+            <NavLink
+              className="nav-link rounded-3"
+              to={`/anualidades`}
+              activeClassName="active"
+            >
+              <div className="p-2 txt-dark">
+                <span className="icon shadow p-2 rounded-3 ">
+                  <i className="fa fa-hand-holding-usd "></i>
+                </span>
+                <span className="nav-link-text ms-1">Anualidades</span>
+              </div>
+            </NavLink>
+          </li>
 
           <li className="nav-item mt-3">
             <span
@@ -63,29 +66,16 @@ const SideBar = () => {
           <li className="nav-item m-1">
             <NavLink
               className="nav-link rounded-3"
-              to="/y"
+              to="/amortizacion"
               activeClassName="active"
             >
               <div className="p-2 txt-dark">
                 <span className="icon shadow p-2 rounded-3 ">
                   <i className="fa fa-hand-holding-usd "></i>
                 </span>
-                <span className="nav-link-text ms-1">Dashboard</span>
-              </div>
-            </NavLink>
-          </li>
-
-          <li className="nav-item m-1">
-            <NavLink
-              className="nav-link rounded-3"
-              to="/z"
-              activeClassName="active"
-            >
-              <div className="p-2 txt-dark">
-                <span className="icon shadow p-2 rounded-3 ">
-                  <i className="fa fa-hand-holding-usd "></i>
+                <span className="nav-link-text ms-1">
+                  Amortizacion de deuda
                 </span>
-                <span className="nav-link-text ms-1">Dashboard</span>
               </div>
             </NavLink>
           </li>

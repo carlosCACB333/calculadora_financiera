@@ -4,6 +4,8 @@ import NavBar from "../components/NavBar";
 import Simple from "../pages/Simple";
 import { Switch, Route, HashRouter } from "react-router-dom";
 import Home from "../pages/Home";
+import Anualidades from "../pages/Anualidades";
+import Amortizacion from "../pages/Amortizacion";
 
 const AppRouter = () => {
   return (
@@ -19,6 +21,8 @@ const AppRouter = () => {
             {/* paginas de la applicacion */}
             <Switch>
               <Route exact path="/simple" component={Simple} />
+              <Route exact path="/anualidades" component={Anualidades} />
+              <Route exact path="/amortizacion" component={Amortizacion} />
               <Route path="/" component={Home} />
             </Switch>
           </div>
