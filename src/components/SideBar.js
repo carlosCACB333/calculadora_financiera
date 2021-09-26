@@ -27,6 +27,21 @@ const SideBar = () => {
           </li>
           <li className="nav-item m-1">
             <NavLink
+              exact
+              className="nav-link rounded-3"
+              to={`/`}
+              activeClassName="active"
+            >
+              <div className="p-2 txt-dark">
+                <span className="icon shadow p-2 rounded-3 ">
+                  <i className="fa fa-hand-holding-usd "></i>
+                </span>
+                <span className="nav-link-text ms-1">Home</span>
+              </div>
+            </NavLink>
+          </li>
+          <li className="nav-item m-1">
+            <NavLink
               className="nav-link rounded-3"
               to={`/simple`}
               activeClassName="active"
@@ -39,6 +54,7 @@ const SideBar = () => {
               </div>
             </NavLink>
           </li>
+
           <li className="nav-item m-1">
             <NavLink
               className="nav-link rounded-3"

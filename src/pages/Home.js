@@ -13,6 +13,26 @@ const Home = () => {
           nuestra applicación web
         </small>
       </Link>
+      <Link
+        to="/anualidades"
+        className="btn shadow bg-gradient-purple m-2  rounded-3"
+      >
+        <h2>Calculadora de anualidades</h2>
+        <small>
+          Calcule la anualidad vencida y anticipada de una manera muy sencilla
+          con nuestra applicación web
+        </small>
+      </Link>
+      <Link
+        to="/amortizacion"
+        className="btn shadow bg-gradient-purple m-2  rounded-3"
+      >
+        <h2>Calculadora de amortización</h2>
+        <small>
+          Calcule la amortizacion de una anualidad vencida de manera muy
+          sencilla con nuestra applicación web
+        </small>
+      </Link>
     </div>
   );
 };
