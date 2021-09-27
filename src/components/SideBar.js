@@ -22,7 +22,7 @@ const SideBar = () => {
               className="nav-link-text ms-2 text-uppercase fw-bold opacity-50"
               style={{ fontSize: ".75em" }}
             >
-              Calculadora de interés
+              Dashboard
             </small>
           </li>
           <li className="nav-item m-1">
@@ -34,12 +34,21 @@ const SideBar = () => {
             >
               <div className="p-2 txt-dark">
                 <span className="icon shadow p-2 rounded-3 ">
-                  <i className="fa fa-hand-holding-usd "></i>
+                  <i className="fa fa-home "></i>
                 </span>
                 <span className="nav-link-text ms-1">Home</span>
               </div>
             </NavLink>
           </li>
+          <li className="nav-item mt-3">
+            <small
+              className="nav-link-text ms-2 text-uppercase fw-bold opacity-50"
+              style={{ fontSize: ".75em" }}
+            >
+              Calculadora de interés
+            </small>
+          </li>
+
           <li className="nav-item m-1">
             <NavLink
               className="nav-link rounded-3"
