@@ -7,6 +7,7 @@ const Table = ({ data }) => {
         className="shadow rounded-5 bg-gradient-gray p-5 table-responsive scroll"
         style={{ maxHeight: "85vh" }}
       >
+        <h4 className="text-primary"> Tabla de amortizaciones</h4>
         <table className="table">
           <thead>
             <tr>

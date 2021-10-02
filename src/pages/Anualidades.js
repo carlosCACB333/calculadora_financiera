@@ -3,6 +3,7 @@ import Input from "../components/formControl/Input";
 import Radios from "../components/formControl/Radios";
 import Select from "../components/formControl/Select";
 import Table from "../components/Table";
+import TimeLineAnualidades from "../components/TimeLineAnualidades";
 import { amortizacion } from "../helpers/amortizacion";
 import { anualidades } from "../helpers/anualidades";
 
@@ -103,7 +104,7 @@ const Anualidades = () => {
   };
   return (
     <div className="row">
-      <div className="col-xl-6 mx-auto">
+      <div className="col-xl-5 mx-auto">
         <div>
           <form className="bg-gradient-gray shadow rounded-5 p-5 ">
             <div className="row ">
@@ -137,7 +138,7 @@ const Anualidades = () => {
                   attr={{ name: "tipo", onClick: () => setError(null) }}
                   values={[
                     { value: "va", help: "Valor actual" },
-                    { value: "vf", help: "Valor final" },
+                    { value: "vf", help: "Valor futuro" },
                   ]}
                   checked={form?.tipo}
                   label="¿Qué quieres calcular?"
@@ -172,8 +173,8 @@ const Anualidades = () => {
                           value: form.vf,
                         }}
                         onChange={formChange}
-                        label="Valor final"
-                        help="Valor final"
+                        label="Valor futuro"
+                        help="Valor futuro"
                         error={error?.vf}
                       />
                     </div>
@@ -292,6 +293,9 @@ const Anualidades = () => {
             </div>
           )}
         </div>
+      </div>
+      <div className="col-xl-6 mx-auto">
+        <TimeLineAnualidades />
       </div>
 
       {amortizaciones && <Table data={amortizaciones} />}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Input from "../components/formControl/Input";
 import Radios from "../components/formControl/Radios";
 import Select from "../components/formControl/Select";
+import TimeLine from "../components/TimeLine";
 import { interesCompuesto, interesSimple } from "../helpers/financiera";
 import useForm from "../hooks/useForm";
 const Simple = () => {
@@ -68,7 +69,7 @@ const Simple = () => {
   };
   return (
     <div className="row">
-      <div className="col-xl-6 m-auto">
+      <div className="col-xl-5 m-auto">
         <div>
           <form
             className="bg-gradient-gray shadow rounded-5 p-5 "
@@ -236,6 +237,10 @@ const Simple = () => {
             </div>
           )}
         </div>
+      </div>
+
+      <div className="col-xl-6 m-auto">
+        <TimeLine />
       </div>
     </div>
   );
