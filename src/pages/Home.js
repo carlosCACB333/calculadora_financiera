@@ -46,6 +46,20 @@ const Home = () => {
             </Link>
           </div>
         </div>
+        <div className="col-lg-4  mb-2 m-auto">
+          <div
+            style={{ height: "100%" }}
+            className="shadow bg-gradient-purple  rounded-3"
+          >
+            <Link to="/ratios" className="btn">
+              <h2>Calculadora de ratios financieros</h2>
+              <small>
+                Calcule los ratios financieros más comunes de manera muy
+                sencilla con nuestra applicación web
+              </small>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

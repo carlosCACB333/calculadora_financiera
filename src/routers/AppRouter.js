@@ -6,6 +6,7 @@ import { Switch, Route, HashRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Anualidades from "../pages/Anualidades";
 import Amortizacion from "../pages/Amortizacion";
+import Ratios from "../pages/Ratios";
 
 const AppRouter = () => {
   return (
@@ -23,6 +24,7 @@ const AppRouter = () => {
               <Route exact path="/simple" component={Simple} />
               <Route exact path="/anualidades" component={Anualidades} />
               <Route exact path="/amortizacion" component={Amortizacion} />
+              <Route exact path="/ratios" component={Ratios} />
               <Route path="/" component={Home} />
             </Switch>
           </div>
